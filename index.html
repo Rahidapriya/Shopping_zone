@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Zone</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/1c622c67c6.js" crossorigin="anonymous"></script>
+  <!-- daisy -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind custom css -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary': '#F9F6E2',
+            'bg-secondary':'#F8F8F8',
+            'btn-primary':'#E527B2',
+            'card-bg':'#1111110D',
+            'star':'#FFC107',
+
+
+          }
+        }
+      }
+    }
+  </script>
+  <!-- main css -->
+  <style>
+    * {
+        font-family: 'Work Sans', sans-serif;
+    }
+   
+  .rounded-right {
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+  </style>
+</head>
+<body>
+    <main>
+        <section class=" min-h-screen bg-bg-primary pb-8 lg:pb-0 flex flex-col-reverse  justify-center lg:flex-row items-center lg:justify-around">
+           <div class="flex-1 lg:pl-24 text-center flex flex-col items-center">
+            <h3 class="font-medium text-3xl">---SALE FEVER---</h3>
+            <h1 class="font-bold text-3xl px-10 md:px-0 md:text-6xl my-11">Purchase TK 200 or above & get <span class="text-btn-primary">20% off</span></h1>
+            <div class="flex flex-col md:flex-row gap-8 ">
+                <p class="font-medium text-2xl">Use Promo Code</p>
+                <button class="btn bg-btn-primary text-2xl font-normal rounded-none text-white hover:text-black">SELL200</button>
+            </div>
+        </div>
+            <!-- pic -->
+            <div class="">
+                <img src="images/Summer 1.png" alt="">
+            </div>
+           
+        </section>
+        <section class="bg-bg-secondary p-10 gap-6">
+        <!-- card -->
+        <div class="text-3xl font-semibold mb-6">
+            <h1 >Kitchenware</h1>
+        </div>
+        <!-- grid grid-cols-1 lg:grid-cols-6 -->
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
+           
+            <!-- 2 card row together -->
+            <!-- grid  grid-cols-3 gap-5 col-span-4 -->
+            <div class=" w-75% flex-1">
+                 <!-- new title1 card -->
+           <div class="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+             <!-- card-1 -->
+             
+              <div class="card card-compact bg-base-100 shadow-xl cursor-pointer" onclick="addToCart('K. Accessories', 39.00)">
+                <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod1.png" alt="Shoes" /></figure>
+                <div class="card-body flex items-center">
+                    <!-- stars -->
+            
+              <div class="flex gap-1 text-color-primary">
+                <i class="fa fa-star text-star" aria-hidden="true"></i>
+                <i class="fa fa-star text-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o text-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+              </div>
+
+                  <h2 class="card-title text-center"id='x' >K. Accessories</h2>
+                  <p class="text-center " ><span id="card1Price">39.00</span>  TK</p>
+                  
+                </div>
+             
+             </div>
+
+        <!-- card-2 -->
+        <div class="card card-compact bg-base-100 shadow-xl cursor-pointer" onclick="addToCart('K2. Accessories', 25.00)">
+            <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod2.png" alt="Shoes" /></figure>
+            <div class="card-body flex items-center">
+                <!-- stars -->
+        
+          <div class="flex gap-1 text-color-primary">
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+          </div>
+
+              <h2 class="card-title text-center">K2. Accessories</h2>
+              <p class="text-center"><span id="card1Price">25.00</span> TK</p>
+              
+            </div>
+          </div>
+          <!-- card-3 -->
+
+          <div class="card card-compact bg-base-100 shadow-xl cursor-pointer" onclick="addToCart('Home Cooker', 49.00)">
+            <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod3.png" alt="Shoes" /></figure>
+            <div class="card-body flex items-center">
+                <!-- stars -->
+        
+          <div class="flex gap-1 text-color-primary">
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+          </div>
+
+              <h2 class="card-title text-center" id="card1Name">Home Cooker</h2>
+              <p class="text-center">49.00 TK</p>
+              
+            </div>
+          </div>
+          <!-- card 3 end -->
+           </div>
+           <!-- new title2 card -->
+          <div class="col-span-3 text-3xl font-semibold my-8">
+            <h1 >Sportswear</h1>
+        </div>
+        <div class="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- card-4 -->
+          <div class="card card-compact bg-base-100 shadow-xl "  onclick="addToCart('Sports Back Cap', 49.00)">
+            <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod4.png" alt="Shoes" /></figure>
+            <div class="card-body flex items-center">
+                <!-- stars -->
+        
+          <div class="flex gap-1 text-color-primary">
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star " aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+          </div>
+
+              <h2 class="card-title text-center">Sports Back Cap</h2>
+              <p class="text-center">49.00 TK</p>
+              
+            </div>
+          </div>
+         <!--card-5  -->
+         <div class="card card-compact bg-base-100 shadow-xl "  onclick="addToCart('Full Jersey Set', 69.00)">
+            <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod5.png" alt="Shoes" /></figure>
+            <div class="card-body flex items-center">
+                <!-- stars -->
+        
+          <div class="flex gap-1 text-color-primary">
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+          </div>
+
+              <h2 class="card-title text-center">Full Jersey Set</h2>
+              <p class="text-center">69.00 TK</p>
+              
+            </div>
+          </div>
+          <!-- card-6 -->
+
+          <div class="card card-compact bg-base-100 shadow-xl " onclick="addToCart('Sports cates', 159.00)">
+            <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod6.png" alt="Shoes" /></figure>
+            <div class="card-body flex items-center">
+                <!-- stars -->
+        
+          <div class="flex gap-1 text-color-primary">
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+          </div>
+
+              <h2 class="card-title text-center">Sports cates</h2>
+              <p class="text-center">159.00 TK</p>
+              
+            </div>
+          </div>
+          <!-- card-6-end -->
+</div>
+
+<!-- 3rd card -->
+<div class="col-span-3 text-3xl font-semibold my-8">
+  <h1 >Furniture</h1>
+</div>
+<div class="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- card-7 -->
+<div class="card card-compact bg-base-100 shadow-xl "  onclick="addToCart('Single Relax Chair', 185.00)">
+  <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod7.png" alt="Shoes" /></figure>
+  <div class="card-body flex items-center">
+      <!-- stars -->
+
+<div class="flex gap-1 text-color-primary">
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star " aria-hidden="true"></i>
+  <i class="fa fa-star text-star " aria-hidden="true"></i>
+  <i class="fa fa-star text-star " aria-hidden="true"></i>
+  <i class="fa fa-star-o text-color-rating text-star" aria-hidden="true"></i>
+</div>
+
+    <h2 class="card-title text-center">Single Relax Chair</h2>
+    <p class="text-center">185.00 TK</p>
+    
+  </div>
+</div>
+<!--card-8 -->
+<div class="card card-compact bg-base-100 shadow-xl "  onclick="addToCart('Children play', 299.00)">
+  <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod8.png" alt="Shoes" /></figure>
+  <div class="card-body flex items-center">
+      <!-- stars -->
+
+<div class="flex gap-1 text-color-primary">
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+</div>
+
+    <h2 class="card-title text-center">Children play</h2>
+    <p class="text-center">299.00 TK</p>
+    
+  </div>
+</div>
+<!-- card-9 -->
+
+<div class="card card-compact bg-base-100 shadow-xl " onclick="addToCart('Flexible Sofa', 339.00)">
+  <figure class="bg-card-bg m-4 py-6 rounded-lg"><img src="/images/prod9.png" alt="Shoes" /></figure>
+  <div class="card-body flex items-center">
+      <!-- stars -->
+
+<div class="flex gap-1 text-color-primary">
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  <i class="fa fa-star text-star" aria-hidden="true"></i>
+  
+</div>
+
+    <h2 class="card-title text-center">Flexible Sofa</h2>
+    <p class="text-center">339.00 TK</p>
+    
+  </div>
+</div>
+<!-- card-9-end -->
+</div>
+
+<!-- end 3rd card -->
+        </div>
+        
+        <!-- sidecurt -->
+        <!-- col-span-2 mt-8 lg:mt-0 -->
+        
+        <div class="w-25% mt-8 lg:mt-0">
+          <!-- warning -->
+        <div class="alert alert-warning hidden" id="warning">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          <span>Warning: Invalid Cupon Code!</span>
+        </div>
+        <!-- success -->
+        <div class="alert alert-success hidden" id="success">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span>Congratulaton: Your Got Discount!</span>
+        </div>
+        <!-- cupon info -->
+        <div class="alert alert-info hidden" id="showInfo">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>Please Use Cupon Code "SELL200"</span>
+        </div>
+           
+        <div class=" flex flex-col items-center gap-8 ">
+             <!-- sidecurt-1 -->
+            
+            <div class=" bg-white flex flex-col py-8 px-6 lg:mr-7 ">
+                <p class=" font-medium text-xl md:text-2xl">Have coupon?</p>
+                <div class="container  flex  items-center ">
+                    <div class="relative"> 
+                      <input type="text" class="h-12 md:pl-10 md:pr-20 px-10 rounded-lg z-0 focus:shadow border-2" id="cuponcode" placeholder="Coupon code ">
+                        <div class="absolute top-0 bottom-0 right-0">
+                            <!-- hover:bg-red-600 -->
+                            <button id="apply-btn" class="btn h-full w-20 text-white  bg-btn-primary  rounded-r-lg rounded-right hover:bg-red-600" disabled>Apply</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- sidecart-2 -->
+        <div class="bg-white  h-5/6 py-8 px-7 lg:mr-7 md:px-12">
+            <div >
+              <ol id="cart-list" class=" text-xl"></ol>
+            </div>
+            <hr class="my-3 hidden" id="hr-line">
+            <div >
+              <p class="font-bold text-xl" >Total Price: <span class="text-gray-400 font-normal" id="total-price">0.00 TK</span> </p>
+              <p class="font-bold text-xl" >Discount: <span class="text-gray-400 font-normal" id="total-dicount">0.00 TK</span></p>
+              <p class="font-bold text-xl" >Total: <span class="text-gray-400 font-normal" id="after-discount-price">0.00 TK</span></p>
+            </div>
+            <hr class="my-3 hidden" id="hr-line2">
+        
+            <button class="btn btn-wide   bg-btn-primary text-white" id="purchase-btn" onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
+            <dialog id="my_modal_1" class="modal ">
+              <form method="dialog" class="modal-box w-11/12 max-w-sm">
+                <div class="flex flex-col items-center ">
+                  <img src="images/congo.png" alt="">
+                <h3 class="font-bold text-2xl text-center">Congratulation!</h3>
+                <p class="py-4 text-center">Your Purchase the product</p>
+                
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn btn-wide bg-btn-primary text-white hover:text-black" id="refreshButton">Go Home</button>
+                </div>
+              </div>
+              </form>
+            </dialog>
+          </div>
+          
+          
+           
+            <!-- model -->
+            <!-- You can open the modal using ID.showModal() method -->
+
+
+            <!-- endmodel -->
+        </div>
+            
+        </div>
+       
+
+        </div>
+        
+        </section>
+    </main>
+    <script src="./js/domreplica.js"></script>
+</body>
+</html>
